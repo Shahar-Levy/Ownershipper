@@ -80,9 +80,9 @@ func generateCodeOwners(numOwners int) []owner {
 }
 
 // write owners to CODEOWNERS file
-func (owners owners) write(outFmt string, overwright bool) {
+func (o owners) write(outFmt string, overwright bool) {
 	var ownersStr string
-	for _, owner := range owners.ownerList {
+	for _, owner := range o.ownerList {
 		ownersStr += owner.email + " "
 	}
 	ownersStr = strings.TrimRight(ownersStr, " ")
